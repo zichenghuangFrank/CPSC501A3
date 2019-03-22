@@ -7,7 +7,6 @@ public class ObjectCreator {
 	public Object creator() throws IOException{
 		BufferedReader re = new BufferedReader(new InputStreamReader(System.in));
 		menuPrint();
-		
 		utility object = null;
 		String userInput = re.readLine();
 		
@@ -47,7 +46,6 @@ public class ObjectCreator {
 		return object;
 		
 	}
-	
 	public void menuPrint() {
 		System.out.println("1. A simple object with only primitives for instance variables.");
 		System.out.println("2. An object that contains references to other objects.");

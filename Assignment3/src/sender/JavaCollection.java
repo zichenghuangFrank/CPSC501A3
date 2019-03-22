@@ -2,14 +2,20 @@ package sender;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 
-public class JavaCollection implements utility{
 
-	private ArrayList<Object> objectList = new ArrayList<Object>();    
+public class JavaCollection implements utility{    
 	
+	public Collection<Object> classList;
+	
+	// Initialize 4 elements in the arraylist
 	public JavaCollection() {
-		objectList.add(new OnlyPrimitives());
-		objectList.add(new ReferencesObject());
+		classList = new ArrayList<Object>();
+		classList.add(new OnlyPrimitives());
+		classList.add(new OnlyPrimitives());
+		classList.add(new OnlyPrimitives());
+		classList.add(new OnlyPrimitives());
 	}
 	
 	public void setFieldVal() throws IOException {}

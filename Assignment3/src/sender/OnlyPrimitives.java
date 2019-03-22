@@ -8,17 +8,21 @@ public class OnlyPrimitives implements utility{
 	private boolean aBoolean;
 	private byte aByte;
 	private char aChar;
-//	private short aShort;
+	private short aShort;
 	private int aInteger;
-//	private long aLong;
-//	private float aFloat;
-//	private double aDouble;
+	private long aLong;
+	private float aFloat;
+	private double aDouble;
 	
 	public OnlyPrimitives() {
 		aBoolean = false;
 		aByte = 0;
 		aChar = '0';
 		aInteger = 0;
+		aShort = 0;
+		aLong = 0;
+		aFloat = 0;
+		aDouble = 0.0;
 	}
 	
 	public void setBoolean(boolean b) {
@@ -37,6 +41,23 @@ public class OnlyPrimitives implements utility{
 		aInteger = n;
 	}
 	
+	public void setShort(short n) {
+		aShort = n;
+	}
+	
+	public void setLong(long n) {
+		aLong = n;
+	}
+	
+	public void setFloat(float n) {
+		aFloat = n;
+	}
+	
+	public void setDouble(double n) {
+		aDouble = n;
+	}
+	
+	
 	public boolean getBoolean() {
 		return aBoolean;
 	}
@@ -51,6 +72,22 @@ public class OnlyPrimitives implements utility{
 	
 	public int getInt() {
 		return aInteger;
+	}
+	
+	public short getShort() {
+		return aShort;
+	}
+	
+	public long getLong() {
+		return aLong;
+	}
+	
+	public float getFloat() {
+		return aFloat;
+	}
+	
+	public double getDouble() {
+		return aDouble;
 	}
 	
 	public void setFieldVal() throws IOException {
@@ -68,6 +105,18 @@ public class OnlyPrimitives implements utility{
 		System.out.println("Enter the value for the int: ");
 		setInt(Integer.parseInt(re.readLine()));
 		System.out.println("The integer has been set to: " + getInt());
+		System.out.println("Enter the value for the short: ");
+		setShort(Short.parseShort(re.readLine()));
+		System.out.println("The short has been set to: " + getShort());
+		System.out.println("Enter the value for the long: ");
+		setLong(Long.parseLong(re.readLine()));
+		System.out.println("The long has been set to: " + getLong());
+		System.out.println("Enter the value for the float: ");
+		setFloat(Float.parseFloat(re.readLine()));
+		System.out.println("The float has been set to: " + getFloat());
+		System.out.println("Enter the value for the double: ");
+		setDouble(Double.parseDouble(re.readLine()));
+		System.out.println("The double has been set to: " + getDouble());
 		re.close();
 	}
 }

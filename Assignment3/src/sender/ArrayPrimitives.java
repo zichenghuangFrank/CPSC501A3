@@ -6,19 +6,19 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class ArrayPrimitives implements utility {
-
-	Scanner in = new Scanner(System.in);
 	
 	public int[] aIntArray;
 	private int length;
 	
 	public ArrayPrimitives() {
 		System.out.println("Please enter the length for the array: ");
-		length = in.nextInt();
-		aIntArray = new int[length];
+
 	}
 
 	public void setFieldVal() throws IOException {
+		Scanner in = new Scanner(System.in);
+		length = in.nextInt();
+		aIntArray = new int[length];
 		BufferedReader re = new BufferedReader(new InputStreamReader(System.in));
 		for(int i = 0; i < aIntArray.length; i++) {
 			System.out.println("Please set int value for index[" + i + "]");
@@ -34,7 +34,7 @@ public class ArrayPrimitives implements utility {
 			}
 		}
 		System.out.println("}");
-		
+		in.close();
 		re.close();	
 	}
 	
